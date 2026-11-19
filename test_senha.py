@@ -17,3 +17,9 @@ def test_senha_vazia():
     senha = ""
     resultado = senha_valida(senha)
     assert resultado is False
+
+
+def test_senha_apenas_espacos():
+    senha = " " * (MINIMO + 2)
+    resultado = senha_valida(senha)
+    assert resultado is False
